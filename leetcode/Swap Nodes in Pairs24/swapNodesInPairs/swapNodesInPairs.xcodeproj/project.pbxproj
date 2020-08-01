@@ -24,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		929AC03F24D5A55A00BAA020 /* IMG_3900.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3900.JPG; sourceTree = "<group>"; };
 		92BCF08E24D31D390075B83A /* swapNodesInPairs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = swapNodesInPairs; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BCF09124D31D390075B83A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		92BCF09824D31DED0075B83A /* swapNodesInPairs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swapNodesInPairs.h; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 				92BCF09124D31D390075B83A /* main.c */,
 				92BCF09824D31DED0075B83A /* swapNodesInPairs.h */,
 				92BCF09924D31DED0075B83A /* swapNodesInPairs.c */,
+				929AC03F24D5A55A00BAA020 /* IMG_3900.JPG */,
 			);
 			path = swapNodesInPairs;
 			sourceTree = "<group>";

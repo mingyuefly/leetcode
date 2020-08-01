@@ -19,30 +19,26 @@
 //
 
 #include "swapNodesInPairs.h"
+#include <stdbool.h>
 
 struct ListNode* swapPairs(struct ListNode* head){
     if (head == NULL || head->next == NULL) {
         return head;
     }
-    struct ListNode *node1 = head;
-    struct ListNode *node2 = head->next;
-    struct ListNode *node3 = head->next->next;
-    struct ListNode *pre = NULL;
-    head = node2;
-    //struct ListNode *returnHead = head->next;
-    while (node1 != NULL && node2 != NULL) {
-        node1->next = node3;
-        node2->next = node1;
-        if (pre != NULL) {
-            pre->next = node2;
-        }
-        pre = node1;
-        node1 = node3;
-        if (node3 == NULL || node3->next == NULL) {
+    struct ListNode *first = head;
+    struct ListNode *second = head->next;
+    head = head->next;
+    while (true) {
+        if (second->next == NULL || second->next->next == NULL) {
+            first->next = second->next;
+            second->next = first;
             break;
         }
-        node2 = node1->next;
-        node3 = node1->next->next;
+        first->next = second->next->next;
+        struct ListNode *tmp = second->next;
+        second->next = first;
+        first = tmp;
+        second = second->next->next;
     }
     return head;
 }
