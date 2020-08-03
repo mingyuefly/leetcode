@@ -1,14 +1,14 @@
 //
 //  main.c
-//  swapNodesInPairs
+//  linkedListCycle
 //
-//  Created by mingyue on 2020/7/30.
+//  Created by mingyue on 2020/8/3.
 //  Copyright © 2020 Gmingyue. All rights reserved.
 //
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "swapNodesInPairs.h"
+#include "linkedListCycle.h"
 
 int main(int argc, const char * argv[]) {
     struct ListNode *head = (struct ListNode *)malloc(sizeof(struct ListNode));
@@ -26,19 +26,14 @@ int main(int argc, const char * argv[]) {
     node2->next = node3;
     node3->next = node4;
     //node3->next = NULL;
+    //node4->next = node2;
     node4->next = NULL;
     
-    struct ListNode * tmpHead = head;
-    while (tmpHead) {
-        printf("%d ", tmpHead->val);
-        tmpHead = tmpHead->next;
-    }
-    printf("\n");
-    
-    struct ListNode * headR = swapPairs(head);
-    while (headR) {
-        printf("%d ", headR->val);
-        headR = headR->next;
+    bool hasCycle = linkedListCycle(head);
+    if (hasCycle == true) {
+        printf("has cycle");
+    } else {
+        printf("has no cycle");
     }
     printf("\n");
     
