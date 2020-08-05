@@ -42,6 +42,7 @@ Output: true
 #include <iostream>
 #include <stack>
 #include <string>
+//#include <>
 
 using namespace std;
 
@@ -67,16 +68,14 @@ public:
                         isValid = false;
                         break;
                     }
-                }
-                if (a == ']') {
+                } else if (a == ']') {
                     if (tmpStack.top() == '[') {
                         tmpStack.pop();
                     } else {
                         isValid = false;
                         break;
                     }
-                }
-                if (a == '}') {
+                } else if (a == '}') {
                     if (tmpStack.top() == '{') {
                         tmpStack.pop();
                     } else {
