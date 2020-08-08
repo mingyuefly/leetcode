@@ -42,7 +42,8 @@ Output: true
 #include <iostream>
 #include <stack>
 #include <string>
-//#include <>
+#include <map>
+#include <array>
 
 using namespace std;
 
@@ -93,8 +94,43 @@ public:
     }
 };
 
+class Solution1 {
+public:
+    bool isValid(string s) {
+        stack<char> tmpStack;
+        map<char, char> tmpMap;
+        tmpMap = {{')','('}, {']','['}, {'}','{'}};
+        unsigned long size = s.length();
+        bool isValid = false;
+        for (int i = 0; i < size; i++) {
+            char a = s[i];
+            if (tmpMap.find(a) == tmpMap.end()) {
+                tmpStack.push(a);
+            } else {
+                if (tmpStack.size() == 0) {
+                    isValid = false;
+                    return isValid;
+                }
+                if (tmpMap[a] == tmpStack.top()) {
+                    tmpStack.pop();
+                } else {
+                    isValid = false;
+                    break;
+                }
+            }
+        }
+        if (tmpStack.size() == 0) {
+            isValid = true;
+        }
+        return isValid;
+    }
+};
+
+
+
 int main(int argc, const char * argv[]) {
-    Solution solution;
+    //Solution solution;
+    Solution1 solution;
     string inputString = "()";
     string inputString1 = "()[]{}";
     string inputString2 = "(]";
