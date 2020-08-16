@@ -51,11 +51,16 @@ int main(int argc, const char * argv[]) {
     int k = 3;
     vector<int> arr = {4, 5, 8, 2};
     KthLargest kthLargest = KthLargest(k, arr);
-    kthLargest.add(3);   // returns 4
-    kthLargest.add(5);   // returns 5
-    kthLargest.add(10);  // returns 5
-    kthLargest.add(9);   // returns 8
-    kthLargest.add(4);   // returns 8
+    int k1 = kthLargest.add(3);   // returns 4
+    cout << k1 << endl;
+    int k2 = kthLargest.add(5);   // returns 5
+    cout << k2 << endl;
+    int k3 = kthLargest.add(10);  // returns 5
+    cout << k3 << endl;
+    int k4 = kthLargest.add(9);   // returns 8
+    cout << k4 << endl;
+    int k5 = kthLargest.add(4);   // returns 8
+    cout << k5 << endl;
     
     return 0;
 }
