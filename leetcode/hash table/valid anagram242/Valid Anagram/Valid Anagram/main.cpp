@@ -64,12 +64,24 @@ public:
     }
 };
 
+class Solution1 {
+public:
+    bool isAnagram(string s, string t) {
+        if(s.size()!=t.size())
+            return false;
+        sort(s.begin(),s.end());
+        sort(t.begin(),t.end());
+        return (s==t);
+    }
+};
+
 int main(int argc, const char * argv[]) {
     //string s = "anagram";
     //string t = "nagaram";
     string s = "aacc";
     string t = "ccac";
-    Solution solution = Solution();
+    //Solution solution = Solution();
+    Solution1 solution = Solution1();
     bool valid = solution.isAnagram(s, t);
     if (valid) {
         cout << "valid" << endl;
