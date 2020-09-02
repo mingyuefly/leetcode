@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9295F25724FFD26E0099CF3E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9295F25624FFD26E0099CF3E /* main.cpp */; };
+		9295F23124FFAA6A0099CF3E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9295F23024FFAA6A0099CF3E /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9295F25124FFD26E0099CF3E /* CopyFiles */ = {
+		9295F22B24FFAA6A0099CF3E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9295F25324FFD26E0099CF3E /* Lowest Common Ancestor of a Binary Search Tree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Lowest Common Ancestor of a Binary Search Tree"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9295F25624FFD26E0099CF3E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9295F22D24FFAA6A0099CF3E /* Lowest Common Ancestor of a Binary Search Tree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Lowest Common Ancestor of a Binary Search Tree"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9295F23024FFAA6A0099CF3E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9295F25024FFD26E0099CF3E /* Frameworks */ = {
+		9295F22A24FFAA6A0099CF3E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,26 +38,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9295F24A24FFD26E0099CF3E = {
+		9295F22424FFAA6A0099CF3E = {
 			isa = PBXGroup;
 			children = (
-				9295F25524FFD26E0099CF3E /* Lowest Common Ancestor of a Binary Search Tree */,
-				9295F25424FFD26E0099CF3E /* Products */,
+				9295F22F24FFAA6A0099CF3E /* Lowest Common Ancestor of a Binary Search Tree */,
+				9295F22E24FFAA6A0099CF3E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9295F25424FFD26E0099CF3E /* Products */ = {
+		9295F22E24FFAA6A0099CF3E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9295F25324FFD26E0099CF3E /* Lowest Common Ancestor of a Binary Search Tree */,
+				9295F22D24FFAA6A0099CF3E /* Lowest Common Ancestor of a Binary Search Tree */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9295F25524FFD26E0099CF3E /* Lowest Common Ancestor of a Binary Search Tree */ = {
+		9295F22F24FFAA6A0099CF3E /* Lowest Common Ancestor of a Binary Search Tree */ = {
 			isa = PBXGroup;
 			children = (
-				9295F25624FFD26E0099CF3E /* main.cpp */,
+				9295F23024FFAA6A0099CF3E /* main.cpp */,
 			);
 			path = "Lowest Common Ancestor of a Binary Search Tree";
 			sourceTree = "<group>";
@@ -65,13 +65,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9295F25224FFD26E0099CF3E /* Lowest Common Ancestor of a Binary Search Tree */ = {
+		9295F22C24FFAA6A0099CF3E /* Lowest Common Ancestor of a Binary Search Tree */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9295F25A24FFD26E0099CF3E /* Build configuration list for PBXNativeTarget "Lowest Common Ancestor of a Binary Search Tree" */;
+			buildConfigurationList = 9295F23424FFAA6A0099CF3E /* Build configuration list for PBXNativeTarget "Lowest Common Ancestor of a Binary Search Tree" */;
 			buildPhases = (
-				9295F24F24FFD26E0099CF3E /* Sources */,
-				9295F25024FFD26E0099CF3E /* Frameworks */,
-				9295F25124FFD26E0099CF3E /* CopyFiles */,
+				9295F22924FFAA6A0099CF3E /* Sources */,
+				9295F22A24FFAA6A0099CF3E /* Frameworks */,
+				9295F22B24FFAA6A0099CF3E /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -79,24 +79,24 @@
 			);
 			name = "Lowest Common Ancestor of a Binary Search Tree";
 			productName = "Lowest Common Ancestor of a Binary Search Tree";
-			productReference = 9295F25324FFD26E0099CF3E /* Lowest Common Ancestor of a Binary Search Tree */;
+			productReference = 9295F22D24FFAA6A0099CF3E /* Lowest Common Ancestor of a Binary Search Tree */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9295F24B24FFD26E0099CF3E /* Project object */ = {
+		9295F22524FFAA6A0099CF3E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Gmingyue;
 				TargetAttributes = {
-					9295F25224FFD26E0099CF3E = {
+					9295F22C24FFAA6A0099CF3E = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
-			buildConfigurationList = 9295F24E24FFD26E0099CF3E /* Build configuration list for PBXProject "Lowest Common Ancestor of a Binary Search Tree" */;
+			buildConfigurationList = 9295F22824FFAA6A0099CF3E /* Build configuration list for PBXProject "Lowest Common Ancestor of a Binary Search Tree" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -104,29 +104,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 9295F24A24FFD26E0099CF3E;
-			productRefGroup = 9295F25424FFD26E0099CF3E /* Products */;
+			mainGroup = 9295F22424FFAA6A0099CF3E;
+			productRefGroup = 9295F22E24FFAA6A0099CF3E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9295F25224FFD26E0099CF3E /* Lowest Common Ancestor of a Binary Search Tree */,
+				9295F22C24FFAA6A0099CF3E /* Lowest Common Ancestor of a Binary Search Tree */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9295F24F24FFD26E0099CF3E /* Sources */ = {
+		9295F22924FFAA6A0099CF3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9295F25724FFD26E0099CF3E /* main.cpp in Sources */,
+				9295F23124FFAA6A0099CF3E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		9295F25824FFD26E0099CF3E /* Debug */ = {
+		9295F23224FFAA6A0099CF3E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -184,7 +184,7 @@
 			};
 			name = Debug;
 		};
-		9295F25924FFD26E0099CF3E /* Release */ = {
+		9295F23324FFAA6A0099CF3E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -235,7 +235,7 @@
 			};
 			name = Release;
 		};
-		9295F25B24FFD26E0099CF3E /* Debug */ = {
+		9295F23524FFAA6A0099CF3E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -243,7 +243,7 @@
 			};
 			name = Debug;
 		};
-		9295F25C24FFD26E0099CF3E /* Release */ = {
+		9295F23624FFAA6A0099CF3E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -254,25 +254,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9295F24E24FFD26E0099CF3E /* Build configuration list for PBXProject "Lowest Common Ancestor of a Binary Search Tree" */ = {
+		9295F22824FFAA6A0099CF3E /* Build configuration list for PBXProject "Lowest Common Ancestor of a Binary Search Tree" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9295F25824FFD26E0099CF3E /* Debug */,
-				9295F25924FFD26E0099CF3E /* Release */,
+				9295F23224FFAA6A0099CF3E /* Debug */,
+				9295F23324FFAA6A0099CF3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9295F25A24FFD26E0099CF3E /* Build configuration list for PBXNativeTarget "Lowest Common Ancestor of a Binary Search Tree" */ = {
+		9295F23424FFAA6A0099CF3E /* Build configuration list for PBXNativeTarget "Lowest Common Ancestor of a Binary Search Tree" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9295F25B24FFD26E0099CF3E /* Debug */,
-				9295F25C24FFD26E0099CF3E /* Release */,
+				9295F23524FFAA6A0099CF3E /* Debug */,
+				9295F23624FFAA6A0099CF3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9295F24B24FFD26E0099CF3E /* Project object */;
+	rootObject = 9295F22524FFAA6A0099CF3E /* Project object */;
 }
