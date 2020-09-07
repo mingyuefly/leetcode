@@ -47,6 +47,17 @@ public:
         if (!root || root == p || root == q) {
             return root;
         }
+        /*
+        if (!root) {
+            return nullptr;
+        }
+        if (root == p) {
+            return p;
+        }
+        if (root == q) {
+            return q;
+        }
+         */
         TreeNode *left = lowestCommonAncestor(root->left, p, q);
         TreeNode *right = lowestCommonAncestor(root->right, p, q);
         if (!left) {
@@ -56,6 +67,18 @@ public:
         } else {
             return root;
         }
+        /*
+        if (!left && right) {
+            return right;
+        } else if (!right && left) {
+            return left;
+        } else if (left && right) {
+            return root;
+        } else {
+            // !left && !right
+            return nullptr;
+        }
+         */
     }
 };
 
