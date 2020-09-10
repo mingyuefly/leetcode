@@ -29,9 +29,32 @@ public:
     }
 };
 
+class Solution1 {
+public:
+    double myPow(double x, int n) {
+        if (n == 0) {
+            return 1;
+        }
+        unsigned int m = (unsigned int)n;//处理溢出问题
+        if (n < 0) {
+            x = 1 / x;
+            m = -m;
+        }
+        double pow = 1;
+        while (m) {
+            if (m & 1) {
+                pow *= x;
+            }
+            x *= x;
+            m >>= 1;
+        }
+        return pow;
+    }
+};
+
 int main(int argc, const char * argv[]) {
-    
-    Solution solution = Solution();
+    //Solution solution = Solution();
+    Solution1 solution = Solution1();
     //double x = 2.0, n = 10;
     double x = 2.0, n = -2;
     double powResult = solution.myPow(x, n);
