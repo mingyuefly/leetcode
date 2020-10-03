@@ -31,22 +31,65 @@
 //
 
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 class Solution {
 public:
-    int totalNQueens(int n) {
-        if (n == 0) {
-            return 0;
+    bool isSafe(vector<vector<int>> &board, int row, int column, int n) {
+        int i, x, y;
+        for (i = 0; i < row; i++) {
+            if (board[i][column] == 1) {
+                return false;
+            }
         }
-        
-        return 0;
+        x = row - 1;
+        y = column - 1;
+        while (x >= 0 && y >= 0) {
+            if (board[x][y] == 1) {
+                return false;
+            }
+            x--;
+            y--;
+        }
+        x = row - 1;
+        y = column + 1;
+        while (x >= 0 && y < n) {
+            if (board[x][y] == 1) {
+                return false;
+            }
+            x--;
+            y++;
+        }
+        return true;
+    }
+    void dfs(int &sol, int row, int &n, vector<vector<int>> &board) {
+        if (row == n) {
+            sol++;
+            return;
+        }
+        for (int column = 0; column < n; column++) {
+            if (isSafe(board, row, column, n)) {
+                board[row][column] = 1;
+                dfs(sol, row + 1, n, board);
+                board[row][column] = 0;
+            }
+        }
+    }
+    int totalNQueens(int n) {
+        int sol = 0;;
+        vector<vector<int>> board(n, vector<int>(n, 0));
+        dfs(sol, 0, n, board);
+        return sol;
     }
 };
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    Solution solution = Solution();
+    int n = 4;
+    cout << solution.totalNQueens(n) << endl;
+    
     return 0;
 }
