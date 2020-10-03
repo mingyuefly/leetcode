@@ -66,21 +66,18 @@ public:
         }
         return true;
     }
-    bool placeQueen(vector<vector<string>> &sol, int row, int &n, vector<string> &v) {
+    void placeQueen(vector<vector<string>> &sol, int row, int &n, vector<string> &v) {
         if (row == n) {
             sol.push_back(v);
-            return false;
+            return;
         }
         for (int column = 0; column < n; column++) {
             if (isSafe(v, row, column, n)) {
                 v[row][column] = 'Q';
-                if (placeQueen(sol, row + 1, n, v)) {
-                    return true;
-                }
+                placeQueen(sol, row + 1, n, v);
             }
             v[row][column] = '.';
         }
-        return false;
     }
     vector<vector<string>> solveNQueens(int n) {
         vector<vector<string>> sol;
