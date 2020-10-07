@@ -75,8 +75,8 @@ public:
             if (isSafe(v, row, column, n)) {
                 v[row][column] = 'Q';
                 placeQueen(sol, row + 1, n, v);
+                v[row][column] = '.';
             }
-            v[row][column] = '.';
         }
     }
     vector<vector<string>> solveNQueens(int n) {
