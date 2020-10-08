@@ -25,6 +25,7 @@
 //
 
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
@@ -35,18 +36,45 @@ public:
             return x;
         }
         int left = 0, right = x;
-        //int result = 0;
+        int result = 0;
         while (left <= right) {
-            int mid = (left + right) / 2;
+            int mid = left + (right - left) / 2;
             if (mid > x / mid) {
                 right = mid - 1;
             } else if (mid < x / mid) {
                 left = mid + 1;
+                result = mid;
             } else {
                 return mid;
             }
         }
-        return left - 1;
+        return result;
+    }
+};
+
+class Solution1 {
+public:
+    double mySqrt(int x, int accuracy) {
+        if (x == 0 || x == 1) {
+            return x;
+        }
+        double left = 0;
+        double right = x;
+        //double result = 0.0;
+        while (left <= right) {
+            double mid = left + (right - left) / 2;
+            if (mid > x / mid) {
+                right = mid;
+            } else if (mid < x / mid) {
+                left = mid;
+            } else {
+                return mid;
+            }
+            if (abs(left - right) < pow(10, -accuracy)) {
+                return left;
+            }
+        }
+        return 0;
     }
 };
 
@@ -54,5 +82,8 @@ int main(int argc, const char * argv[]) {
     Solution solution = Solution();
     int input = 8;
     cout << solution.mySqrt(input) << endl;
+    Solution1 solution1 = Solution1();
+    cout << solution1.mySqrt(input, 8) << endl;
+    cout << sqrt(input) << endl;
     return 0;
 }
