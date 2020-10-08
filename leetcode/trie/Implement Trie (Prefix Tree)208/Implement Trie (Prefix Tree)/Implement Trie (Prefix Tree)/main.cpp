@@ -12,59 +12,61 @@
 
 using namespace std;
 
-class TrieNode {
-public:
-    char val;
-    bool isWord;
-    array<TrieNode *, 26> nodes;
-    TrieNode(){};
-    TrieNode(char c) {
-        TrieNode node = TrieNode();
-        node.val = c;
-    }
-};
-
 class Trie {
+public:
+    class TrieNode {
     public:
-    TrieNode rootNode;
+        char val;
+        bool word;
+        TrieNode *nodes[26] = {nullptr};
+        TrieNode(){};
+        TrieNode(char c) {
+            TrieNode node = TrieNode();
+            node.val = c;
+            node.word = false;
+        }
+    };
+    TrieNode *rootNode;
     /** Initialize your data structure here. */
     Trie() {
-        rootNode = TrieNode();
-        rootNode.val = ' ';
+        rootNode = new TrieNode(' ');
     }
     
     /** Inserts a word into the trie. */
     void insert(string word) {
-        TrieNode *node = &rootNode;
-        for (int i = 0; i < word.length(); i++) {
-            TrieNode *tmpNode = node->nodes[word[i] - 'a'];
+        TrieNode *node = rootNode;
+        for (char a:word) {
+            int index = a - 'a';
+            TrieNode *tmpNode = node->nodes[index];
             if (tmpNode == nullptr) {
-                tmpNode = new TrieNode(word[i]);
-                node->nodes[word[i] - 'a'] = tmpNode;
+                tmpNode = new TrieNode(a);
+                node->nodes[index] = tmpNode;
             }
             node = tmpNode;
         }
-        node->isWord = true;
+        node->word = true;
     }
     
     /** Returns if the word is in the trie. */
     bool search(string word) {
-        TrieNode *node = &rootNode;
-        for (int i = 0; i < word.length(); i++) {
-            TrieNode *tmpNode = node->nodes[word[i] - 'a'];
+        TrieNode *node = rootNode;
+        for (char a:word) {
+            int index = a - 'a';
+            TrieNode *tmpNode = node->nodes[index];
             if (tmpNode == nullptr) {
                 return false;
             }
             node = tmpNode;
         }
-        return node->isWord;
+        return node->word;
     }
     
     /** Returns if there is any word in the trie that starts with the given prefix. */
     bool startsWith(string prefix) {
-        TrieNode *node = &rootNode;
-        for (int i = 0; i < prefix.length(); i++) {
-            TrieNode *tmpNode = node->nodes[prefix[i] - 'a'];
+        TrieNode *node = rootNode;
+        for (char a:prefix) {
+            int index = a - 'a';
+            TrieNode *tmpNode = node->nodes[index];
             if (tmpNode == nullptr) {
                 return false;
             }
