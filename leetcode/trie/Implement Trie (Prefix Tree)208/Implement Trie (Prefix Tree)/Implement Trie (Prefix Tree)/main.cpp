@@ -12,24 +12,17 @@
 
 using namespace std;
 
+struct TrieNode {
+    bool word = false;
+    TrieNode *nodes[26] = {nullptr};
+};
+
 class Trie {
 public:
-    class TrieNode {
-    public:
-        char val;
-        bool word;
-        TrieNode *nodes[26] = {nullptr};
-        TrieNode(){};
-        TrieNode(char c) {
-            TrieNode node = TrieNode();
-            node.val = c;
-            node.word = false;
-        }
-    };
     TrieNode *rootNode;
     /** Initialize your data structure here. */
     Trie() {
-        rootNode = new TrieNode(' ');
+        rootNode = new TrieNode();
     }
     
     /** Inserts a word into the trie. */
@@ -39,7 +32,7 @@ public:
             int index = a - 'a';
             TrieNode *tmpNode = node->nodes[index];
             if (tmpNode == nullptr) {
-                tmpNode = new TrieNode(a);
+                tmpNode = new TrieNode();
                 node->nodes[index] = tmpNode;
             }
             node = tmpNode;
