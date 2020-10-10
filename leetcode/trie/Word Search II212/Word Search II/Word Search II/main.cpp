@@ -36,106 +36,80 @@
 #include <vector>
 #include <string>
 #include <set>
+//#include <hashmap>
 
 using namespace std;
 
-struct TrieNode {
-    bool word = false;
-    TrieNode *nodes[26] = {nullptr};
-};
-
 class Trie {
 public:
-    TrieNode *rootNode;
-    /** Initialize your data structure here. */
+    string word = "";
+    bool isWord = false;
+    vector<Trie *> tries;
+    
     Trie() {
-        rootNode = new TrieNode();
+        tries.reserve(26);
+        for (int i = 0; i < 26; i++) {
+            tries[i] = nullptr;
+        }
     }
     
-    /** Inserts a word into the trie. */
     void insert(string word) {
-        TrieNode *node = rootNode;
+        Trie *trie = this;
         for (char a:word) {
             int index = a - 'a';
-            TrieNode *tmpNode = node->nodes[index];
-            if (tmpNode == nullptr) {
-                tmpNode = new TrieNode();
-                node->nodes[index] = tmpNode;
+            auto& tmpTrie = trie->tries[index];
+            if (tmpTrie == nullptr) {
+                Trie* new_trie = new Trie();
+                tmpTrie = new_trie;
             }
-            node = tmpNode;
+            trie = tmpTrie;
         }
-        node->word = true;
-    }
-    
-    /** Returns if the word is in the trie. */
-    bool search(string word) {
-        TrieNode *node = rootNode;
-        for (char a:word) {
-            int index = a - 'a';
-            TrieNode *tmpNode = node->nodes[index];
-            if (tmpNode == nullptr) {
-                return false;
-            }
-            node = tmpNode;
-        }
-        return node->word;
-    }
-    
-    /** Returns if there is any word in the trie that starts with the given prefix. */
-    bool startsWith(string prefix) {
-        TrieNode *node = rootNode;
-        for (char a:prefix) {
-            int index = a - 'a';
-            TrieNode *tmpNode = node->nodes[index];
-            if (tmpNode == nullptr) {
-                return false;
-            }
-            node = tmpNode;
-        }
-        return true;;
+        trie->isWord = true;
+        trie->word = word;
     }
 };
 
 class Solution {
 public:
-    Trie trie;
-    vector<string> result;
-    set<string> rs;
-    void dfs(vector<vector<char>>& board, int x, int y, string str, vector<vector<bool>> visited) {
-        if (x >= board.size() || y >= board[0].size() || x < 0 || y < 0) {
+    void dfs(int x, int y, Trie *trie, vector<vector<char>>& board, vector<string> *result) {
+        if (x >= board.size() || y >= board[x].size() || x < 0 || y < 0) {
             return;
         }
-        if (visited[x][y]) {
+        char c = board[x][y];
+        if (c == '.') {
             return;
         }
-        str += board[x][y];
-        if (!trie.startsWith(str)) {
+        Trie *next_trie = trie->tries[c - 'a'];
+        if (next_trie == nullptr) {
             return;
         }
-        if (trie.search(str)) {
-            if (rs.count(str) == 0) {
-                result.push_back(str);
-                rs.insert(str);
-            }
+        board[x][y] = '.';
+        if (next_trie->isWord) {
+            result->push_back(next_trie->word);
+            next_trie->isWord = false;
         }
-        visited[x][y] = true;
-        dfs(board, x + 1, y, str, visited);
-        dfs(board, x - 1, y, str, visited);
-        dfs(board, x, y + 1, str, visited);
-        dfs(board, x, y - 1, str, visited);
-        visited[x][y] = false;
+        dfs(x + 1, y, next_trie, board, result);
+        dfs(x, y + 1, next_trie, board, result);
+        dfs(x - 1, y, next_trie, board, result);
+        dfs(x, y - 1, next_trie, board, result);
+        board[x][y] = c;
     }
+    
     vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {
-        trie = Trie();
+        if (board.empty()) {
+            return {};
+        }
+        Trie *trie = new Trie();
+        vector<string> result;
         for (string word:words) {
-            trie.insert(word);
+            trie->insert(word);
         }
         int row = (int)board.size();
         int column = (int)board[0].size();
         vector<vector<bool>> visited(row, vector<bool>(column, false));
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
-                dfs(board, i, j, "", visited);
+                dfs(i, j, trie, board, &result);
             }
         }
         return result;
@@ -143,7 +117,7 @@ public:
 };
 
 int main(int argc, const char * argv[]) {
-    /*
+    
     vector<vector<char>> board = {
         {'o','a','a','n'},
         {'e','t','a','e'},
@@ -151,13 +125,14 @@ int main(int argc, const char * argv[]) {
         {'i','f','l','v'}
     };
     vector<string> words = {"oath","pea","eat","rain"};
-     */
+    
     /*
     vector<vector<char>> board = {
         {'a','a'}
     };
     vector<string> words = {"a"};
      */
+    /*
     vector<vector<char>> board = {
         {'b','b','a','a','b','a'},
         {'b','b','a','b','a','a'},
@@ -166,6 +141,7 @@ int main(int argc, const char * argv[]) {
         {'a','b','a','a','b','b'}
     };
     vector<string> words = {"abbbababaa"};
+     */
     Solution solution = Solution();
     vector<string> result = solution.findWords(board, words);
     for(string str:result) {
