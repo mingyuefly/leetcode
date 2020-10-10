@@ -35,11 +35,12 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <set>
+//#include <set>
 //#include <hashmap>
 
 using namespace std;
 
+// 根据具体情况优化trie树很重要
 class Trie {
 public:
     string word = "";
