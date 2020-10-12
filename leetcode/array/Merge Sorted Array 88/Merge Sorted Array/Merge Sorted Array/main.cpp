@@ -15,10 +15,27 @@ using namespace std;
 class Solution {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
-        for (int i = m; i < m + n; i++) {
-            nums1[i] = nums2[i - m];
+        int iA = m-1;
+        int iB = n-1;
+        int iNew = m+n-1;
+        
+        // Fill in the longer vector when both A and B
+        while (iA >= 0 && iB >= 0)
+        {
+            nums1[iA] > nums2[iB] ? nums1[iNew--] = nums1[iA--] : nums1[iNew--] = nums2[iB--];
         }
-        sort(nums1.begin(), nums1.end());
+        
+        // Fill in the rest with either A or B leftover
+        
+        while (iA >= 0)
+        {
+            nums1[iNew--] = nums1[iA--];
+        }
+        
+        while (iB >= 0 )
+        {
+            nums1[iNew--] = nums2[iB--];
+        }
     }
 };
 
