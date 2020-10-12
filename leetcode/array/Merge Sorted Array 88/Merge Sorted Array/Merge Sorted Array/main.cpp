@@ -15,38 +15,10 @@ using namespace std;
 class Solution {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
-        if (n == 0) {
-            return;
+        for (int i = m; i < m + n; i++) {
+            nums1[i] = nums2[i - m];
         }
-        vector<int> sum;
-        int im = 0, in = 0;
-        for (int i = 0; i < m + n; i++) {
-            if (im <= m - 1 && nums1[im] <= nums2[in]) {
-                sum.push_back(nums1[im]);
-                im++;
-                continue;
-            }
-            if (in <= n - 1 && nums1[im] > nums2[in]) {
-                sum.push_back(nums2[in]);
-                in++;
-                continue;
-            }
-            if (im >= m) {
-                for (int j = in; j < n; j++) {
-                    sum.push_back(nums2[j]);
-                }
-                break;
-            }
-            if (in >= n) {
-                for (int j = im; j < m; j++) {
-                    sum.push_back(nums1[j]);
-                }
-                break;
-            }
-        }
-        for (int i = 0; i < m + n; i++) {
-            nums1[i] = sum[i];
-        }
+        sort(nums1.begin(), nums1.end());
     }
 };
 
