@@ -16,17 +16,15 @@ public:
         if (n <= 0) {
             return false;
         }
-        int count = 0;
-        while (n) {
-            count++;
-            n = n & (n - 1);
+        if ((n & (n - 1)) == 0) {
+            return true;
         }
-        return count == 1;
+        return false;
     }
 };
 
 int main(int argc, const char * argv[]) {
-    int input = 12;
+    int input = 16;
     Solution solution = Solution();
     cout << solution.isPowerOfTwo(input) << endl;
     return 0;
