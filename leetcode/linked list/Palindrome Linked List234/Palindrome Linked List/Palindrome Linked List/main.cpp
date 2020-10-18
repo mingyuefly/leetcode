@@ -55,8 +55,10 @@ public:
         ListNode *fast = head;
         ListNode *slow = head;
         ListNode *middle = nullptr;
+        // while条件可以保证退出条件以及指针合法性（不会调用nullptr的next）
+        // 如果链表节点是奇数的话，fast刚好走到最后一个有效节点，如果是偶数的话，fast刚好走到最后一个有效节点指向的空节点，slow始终走到第length/2+1个节点（length为链表长度）。slow刚好记住后半部分的第一个节点。
         while (fast && slow && fast->next) {
-            middle = slow;
+            middle = slow;//middle记住slow前边的节点
             fast = fast->next->next;
             slow = slow->next;
         }
