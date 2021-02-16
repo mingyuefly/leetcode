@@ -50,8 +50,10 @@ public:
 
 int main(int argc, const char * argv[]) {
     //vector<int> nums = {2,3,-2,4};
+    //vector<int> nums = {2,3,-2,4,-2};
+    vector<int> nums = {2,3,-2,4,-2,-1,-2};
     //vector<int> nums = {-2,0,-1};
-    vector<int> nums = {0, 2};
+    //vector<int> nums = {0, 2};
     Solution solution = Solution();
     int result = solution.maxProduct(nums);
     cout << result << endl;

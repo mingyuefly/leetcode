@@ -33,9 +33,12 @@ using namespace std;
 class Solution {
 public:
     int minimumTotal(vector<vector<int>>& triangle) {
+        // 每次只需要记录一层的状态即可
         vector<int> mini = triangle[triangle.size() - 1];
         for (int i = triangle.size() - 2; i >= 0; i--) {
+            // 从下到上递推到顶部
             for (int j = 0; j < triangle[i].size(); j++) {
+                // 记录没一行的状态值
                 mini[j] = triangle[i][j] + min(mini[j], mini[j + 1]);
             }
         }

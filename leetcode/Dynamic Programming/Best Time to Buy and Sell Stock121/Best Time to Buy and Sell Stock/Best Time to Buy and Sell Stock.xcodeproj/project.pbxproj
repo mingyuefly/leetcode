@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F5192721258F684C004249A9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5192720258F684C004249A9 /* main.cpp */; };
+		926024A425DBA4DD00948791 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 926024A325DBA4DD00948791 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F519271B258F684C004249A9 /* CopyFiles */ = {
+		9260249E25DBA4DD00948791 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,13 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		926024AA25DBB9FD00948791 /* triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = triangle.png; sourceTree = "<group>"; };
-		F519271D258F684C004249A9 /* Triangle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Triangle; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5192720258F684C004249A9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		926024A025DBA4DD00948791 /* Best Time to Buy and Sell Stock */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Best Time to Buy and Sell Stock"; sourceTree = BUILT_PRODUCTS_DIR; };
+		926024A325DBA4DD00948791 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F519271A258F684C004249A9 /* Frameworks */ = {
+		9260249D25DBA4DD00948791 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,65 +38,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F5192714258F684C004249A9 = {
+		9260249725DBA4DD00948791 = {
 			isa = PBXGroup;
 			children = (
-				F519271F258F684C004249A9 /* Triangle */,
-				F519271E258F684C004249A9 /* Products */,
+				926024A225DBA4DD00948791 /* Best Time to Buy and Sell Stock */,
+				926024A125DBA4DD00948791 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F519271E258F684C004249A9 /* Products */ = {
+		926024A125DBA4DD00948791 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F519271D258F684C004249A9 /* Triangle */,
+				926024A025DBA4DD00948791 /* Best Time to Buy and Sell Stock */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F519271F258F684C004249A9 /* Triangle */ = {
+		926024A225DBA4DD00948791 /* Best Time to Buy and Sell Stock */ = {
 			isa = PBXGroup;
 			children = (
-				F5192720258F684C004249A9 /* main.cpp */,
-				926024AA25DBB9FD00948791 /* triangle.png */,
+				926024A325DBA4DD00948791 /* main.cpp */,
 			);
-			path = Triangle;
+			path = "Best Time to Buy and Sell Stock";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F519271C258F684C004249A9 /* Triangle */ = {
+		9260249F25DBA4DD00948791 /* Best Time to Buy and Sell Stock */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5192724258F684C004249A9 /* Build configuration list for PBXNativeTarget "Triangle" */;
+			buildConfigurationList = 926024A725DBA4DD00948791 /* Build configuration list for PBXNativeTarget "Best Time to Buy and Sell Stock" */;
 			buildPhases = (
-				F5192719258F684C004249A9 /* Sources */,
-				F519271A258F684C004249A9 /* Frameworks */,
-				F519271B258F684C004249A9 /* CopyFiles */,
+				9260249C25DBA4DD00948791 /* Sources */,
+				9260249D25DBA4DD00948791 /* Frameworks */,
+				9260249E25DBA4DD00948791 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Triangle;
-			productName = Triangle;
-			productReference = F519271D258F684C004249A9 /* Triangle */;
+			name = "Best Time to Buy and Sell Stock";
+			productName = "Best Time to Buy and Sell Stock";
+			productReference = 926024A025DBA4DD00948791 /* Best Time to Buy and Sell Stock */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F5192715258F684C004249A9 /* Project object */ = {
+		9260249825DBA4DD00948791 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Gmingyue;
 				TargetAttributes = {
-					F519271C258F684C004249A9 = {
-						CreatedOnToolsVersion = 12.3;
+					9260249F25DBA4DD00948791 = {
+						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
-			buildConfigurationList = F5192718258F684C004249A9 /* Build configuration list for PBXProject "Triangle" */;
+			buildConfigurationList = 9260249B25DBA4DD00948791 /* Build configuration list for PBXProject "Best Time to Buy and Sell Stock" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -105,29 +104,29 @@
 				en,
 				Base,
 			);
-			mainGroup = F5192714258F684C004249A9;
-			productRefGroup = F519271E258F684C004249A9 /* Products */;
+			mainGroup = 9260249725DBA4DD00948791;
+			productRefGroup = 926024A125DBA4DD00948791 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F519271C258F684C004249A9 /* Triangle */,
+				9260249F25DBA4DD00948791 /* Best Time to Buy and Sell Stock */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F5192719258F684C004249A9 /* Sources */ = {
+		9260249C25DBA4DD00948791 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5192721258F684C004249A9 /* main.cpp in Sources */,
+				926024A425DBA4DD00948791 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		F5192722258F684C004249A9 /* Debug */ = {
+		926024A525DBA4DD00948791 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -153,7 +152,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -186,7 +184,7 @@
 			};
 			name = Debug;
 		};
-		F5192723258F684C004249A9 /* Release */ = {
+		926024A625DBA4DD00948791 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -212,7 +210,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -238,7 +235,7 @@
 			};
 			name = Release;
 		};
-		F5192725258F684C004249A9 /* Debug */ = {
+		926024A825DBA4DD00948791 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -246,7 +243,7 @@
 			};
 			name = Debug;
 		};
-		F5192726258F684C004249A9 /* Release */ = {
+		926024A925DBA4DD00948791 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -257,25 +254,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F5192718258F684C004249A9 /* Build configuration list for PBXProject "Triangle" */ = {
+		9260249B25DBA4DD00948791 /* Build configuration list for PBXProject "Best Time to Buy and Sell Stock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F5192722258F684C004249A9 /* Debug */,
-				F5192723258F684C004249A9 /* Release */,
+				926024A525DBA4DD00948791 /* Debug */,
+				926024A625DBA4DD00948791 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5192724258F684C004249A9 /* Build configuration list for PBXNativeTarget "Triangle" */ = {
+		926024A725DBA4DD00948791 /* Build configuration list for PBXNativeTarget "Best Time to Buy and Sell Stock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F5192725258F684C004249A9 /* Debug */,
-				F5192726258F684C004249A9 /* Release */,
+				926024A825DBA4DD00948791 /* Debug */,
+				926024A925DBA4DD00948791 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F5192715258F684C004249A9 /* Project object */;
+	rootObject = 9260249825DBA4DD00948791 /* Project object */;
 }
