@@ -70,10 +70,10 @@ public:
         
         profit[0][0][0] = 0;
         profit[0][0][1] = 0 - prices[0];
-        profit[0][1][0] = -100001;//最大股票价格
-        profit[0][1][1] = -100001;
-        profit[0][2][0] = -100001;
-        profit[0][2][1] = -100001;
+        for (int k = 1; k < K + 1; k++) {
+            profit[0][k][0] = -100001;//最大股票价格
+            profit[0][k][1] = -100001;
+        }
         
         for (int i = 1; i < days; i++) {
             // 之前经历0次，现在不持有
@@ -81,13 +81,15 @@ public:
             // 之前经历0次，现在持有
             profit[i][0][1] = max(profit[i - 1][0][1], profit[i - 1][0][0] - prices[i]);
             
-            // 之前经历1次，现在不持有
-            profit[i][1][0] = max(profit[i - 1][1][0], profit[i - 1][0][1] + prices[i]);
-            // 之前经历1次，现在持有
-            profit[i][1][1] = max(profit[i - 1][1][1], profit[i - 1][1][0] - prices[i]);
+            for (int k = 1; k < K; k++) {
+                // 之前经历k次，现在不持有
+                profit[i][k][0] = max(profit[i - 1][k][0], profit[i - 1][k - 1][1] + prices[i]);
+                // 之前经历k次，现在持有
+                profit[i][k][1] = max(profit[i - 1][k][1], profit[i - 1][k][0] - prices[i]);
+            }
             
             // 最后一次交易不持有
-            profit[i][2][0] = max(profit[i - 1][2][0], profit[i - 1][1][1] + prices[i]);
+            profit[i][K][0] = max(profit[i - 1][K][0], profit[i - 1][K - 1][1] + prices[i]);
         }
         
         int maxProfit = 0;
