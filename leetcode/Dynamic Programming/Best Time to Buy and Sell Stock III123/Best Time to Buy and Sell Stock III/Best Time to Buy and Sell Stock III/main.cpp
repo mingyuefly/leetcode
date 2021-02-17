@@ -76,12 +76,17 @@ public:
         profit[0][2][1] = -100001;
         
         for (int i = 1; i < days; i++) {
+            // 之前经历0次，现在不持有
             profit[i][0][0] = profit[i - 1][0][0];
+            // 之前经历0次，现在持有
             profit[i][0][1] = max(profit[i - 1][0][1], profit[i - 1][0][0] - prices[i]);
             
+            // 之前经历1次，现在不持有
             profit[i][1][0] = max(profit[i - 1][1][0], profit[i - 1][0][1] + prices[i]);
+            // 之前经历1次，现在持有
             profit[i][1][1] = max(profit[i - 1][1][1], profit[i - 1][1][0] - prices[i]);
             
+            // 最后一次交易不持有
             profit[i][2][0] = max(profit[i - 1][2][0], profit[i - 1][1][1] + prices[i]);
         }
         

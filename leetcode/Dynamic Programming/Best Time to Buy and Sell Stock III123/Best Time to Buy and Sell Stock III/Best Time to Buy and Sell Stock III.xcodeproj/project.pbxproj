@@ -25,6 +25,8 @@
 /* Begin PBXFileReference section */
 		926024B425DBD6B300948791 /* Best Time to Buy and Sell Stock III */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Best Time to Buy and Sell Stock III"; sourceTree = BUILT_PRODUCTS_DIR; };
 		926024B725DBD6B300948791 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		926024BE25DD05EE00948791 /* stock2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stock2.png; sourceTree = "<group>"; };
+		926024BF25DD05EE00948791 /* stock1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stock1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				926024B725DBD6B300948791 /* main.cpp */,
+				926024BF25DD05EE00948791 /* stock1.png */,
+				926024BE25DD05EE00948791 /* stock2.png */,
 			);
 			path = "Best Time to Buy and Sell Stock III";
 			sourceTree = "<group>";
