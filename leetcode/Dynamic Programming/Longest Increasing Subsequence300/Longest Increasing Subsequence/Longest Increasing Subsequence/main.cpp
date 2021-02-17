@@ -67,8 +67,30 @@ public:
     }
 };
 
+class Solution1 {
+public:
+    int lengthOfLIS(vector<int>& nums) {
+        if (nums.empty()) {
+            return 0;
+        }
+        vector<int> result;
+        int numsCount = nums.size();
+        for (int i = 0; i < numsCount; i++) {
+            auto it = lower_bound(result.begin(), result.end(), nums[i]);
+            if (it == result.end()) {
+                result.push_back(nums[i]);
+            } else {
+                *it = nums[i];
+            }
+        }
+        
+        return result.size();
+    }
+};
+
 int main(int argc, const char * argv[]) {
-    Solution solution = Solution();
+    //Solution solution = Solution();
+    Solution1 solution = Solution1();
     vector<int> nums = {10,9,2,5,3,7,101,18};
     int result = solution.lengthOfLIS(nums);
     cout << result << endl;
