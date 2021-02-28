@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		926024CD25DD3D9F00948791 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 926024CC25DD3D9F00948791 /* main.cpp */; };
+		92E8962425EBA04800C768CA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E8962325EBA04800C768CA /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		926024C725DD3D9F00948791 /* CopyFiles */ = {
+		92E8961E25EBA04800C768CA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,14 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		923DF24725DD658200D36209 /* lengthOfLIS2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lengthOfLIS2.png; sourceTree = "<group>"; };
-		923DF24825DD658200D36209 /* lengthOfLIS1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lengthOfLIS1.png; sourceTree = "<group>"; };
-		926024C925DD3D9F00948791 /* Longest Increasing Subsequence */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Longest Increasing Subsequence"; sourceTree = BUILT_PRODUCTS_DIR; };
-		926024CC25DD3D9F00948791 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		92E8962025EBA04800C768CA /* Coin Change322 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Coin Change322"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E8962325EBA04800C768CA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		926024C625DD3D9F00948791 /* Frameworks */ = {
+		92E8961D25EBA04800C768CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,67 +38,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		926024C025DD3D9F00948791 = {
+		92E8961725EBA04800C768CA = {
 			isa = PBXGroup;
 			children = (
-				926024CB25DD3D9F00948791 /* Longest Increasing Subsequence */,
-				926024CA25DD3D9F00948791 /* Products */,
+				92E8962225EBA04800C768CA /* Coin Change322 */,
+				92E8962125EBA04800C768CA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		926024CA25DD3D9F00948791 /* Products */ = {
+		92E8962125EBA04800C768CA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				926024C925DD3D9F00948791 /* Longest Increasing Subsequence */,
+				92E8962025EBA04800C768CA /* Coin Change322 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		926024CB25DD3D9F00948791 /* Longest Increasing Subsequence */ = {
+		92E8962225EBA04800C768CA /* Coin Change322 */ = {
 			isa = PBXGroup;
 			children = (
-				926024CC25DD3D9F00948791 /* main.cpp */,
-				923DF24825DD658200D36209 /* lengthOfLIS1.png */,
-				923DF24725DD658200D36209 /* lengthOfLIS2.png */,
+				92E8962325EBA04800C768CA /* main.cpp */,
 			);
-			path = "Longest Increasing Subsequence";
+			path = "Coin Change322";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		926024C825DD3D9F00948791 /* Longest Increasing Subsequence */ = {
+		92E8961F25EBA04800C768CA /* Coin Change322 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 926024D025DD3D9F00948791 /* Build configuration list for PBXNativeTarget "Longest Increasing Subsequence" */;
+			buildConfigurationList = 92E8962725EBA04800C768CA /* Build configuration list for PBXNativeTarget "Coin Change322" */;
 			buildPhases = (
-				926024C525DD3D9F00948791 /* Sources */,
-				926024C625DD3D9F00948791 /* Frameworks */,
-				926024C725DD3D9F00948791 /* CopyFiles */,
+				92E8961C25EBA04800C768CA /* Sources */,
+				92E8961D25EBA04800C768CA /* Frameworks */,
+				92E8961E25EBA04800C768CA /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Longest Increasing Subsequence";
-			productName = "Longest Increasing Subsequence";
-			productReference = 926024C925DD3D9F00948791 /* Longest Increasing Subsequence */;
+			name = "Coin Change322";
+			productName = "Coin Change322";
+			productReference = 92E8962025EBA04800C768CA /* Coin Change322 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		926024C125DD3D9F00948791 /* Project object */ = {
+		92E8961825EBA04800C768CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Gmingyue;
 				TargetAttributes = {
-					926024C825DD3D9F00948791 = {
+					92E8961F25EBA04800C768CA = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
-			buildConfigurationList = 926024C425DD3D9F00948791 /* Build configuration list for PBXProject "Longest Increasing Subsequence" */;
+			buildConfigurationList = 92E8961B25EBA04800C768CA /* Build configuration list for PBXProject "Coin Change322" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -108,29 +104,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 926024C025DD3D9F00948791;
-			productRefGroup = 926024CA25DD3D9F00948791 /* Products */;
+			mainGroup = 92E8961725EBA04800C768CA;
+			productRefGroup = 92E8962125EBA04800C768CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				926024C825DD3D9F00948791 /* Longest Increasing Subsequence */,
+				92E8961F25EBA04800C768CA /* Coin Change322 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		926024C525DD3D9F00948791 /* Sources */ = {
+		92E8961C25EBA04800C768CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				926024CD25DD3D9F00948791 /* main.cpp in Sources */,
+				92E8962425EBA04800C768CA /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		926024CE25DD3D9F00948791 /* Debug */ = {
+		92E8962525EBA04800C768CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -188,7 +184,7 @@
 			};
 			name = Debug;
 		};
-		926024CF25DD3D9F00948791 /* Release */ = {
+		92E8962625EBA04800C768CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -239,7 +235,7 @@
 			};
 			name = Release;
 		};
-		926024D125DD3D9F00948791 /* Debug */ = {
+		92E8962825EBA04800C768CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -247,7 +243,7 @@
 			};
 			name = Debug;
 		};
-		926024D225DD3D9F00948791 /* Release */ = {
+		92E8962925EBA04800C768CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -258,25 +254,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		926024C425DD3D9F00948791 /* Build configuration list for PBXProject "Longest Increasing Subsequence" */ = {
+		92E8961B25EBA04800C768CA /* Build configuration list for PBXProject "Coin Change322" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				926024CE25DD3D9F00948791 /* Debug */,
-				926024CF25DD3D9F00948791 /* Release */,
+				92E8962525EBA04800C768CA /* Debug */,
+				92E8962625EBA04800C768CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		926024D025DD3D9F00948791 /* Build configuration list for PBXNativeTarget "Longest Increasing Subsequence" */ = {
+		92E8962725EBA04800C768CA /* Build configuration list for PBXNativeTarget "Coin Change322" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				926024D125DD3D9F00948791 /* Debug */,
-				926024D225DD3D9F00948791 /* Release */,
+				92E8962825EBA04800C768CA /* Debug */,
+				92E8962925EBA04800C768CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 926024C125DD3D9F00948791 /* Project object */;
+	rootObject = 92E8961825EBA04800C768CA /* Project object */;
 }
