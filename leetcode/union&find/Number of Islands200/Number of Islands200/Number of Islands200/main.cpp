@@ -48,7 +48,7 @@ using namespace std;
 class UnionFind{
 public:
     int n, m;
-    vector <vector <int> > size;
+    vector <vector <int>> size;
     vector <vector <pair <int, int>>> parent;
     vector <vector <bool>> cross;
     int numofcomponents;
@@ -57,7 +57,7 @@ public:
         this->m = m;
         size.assign(n, vector<int> (m, 1));
         cross.assign(n, vector<bool> (m, true));
-        parent.assign(n, vector<pair <int, int> > (m, {-1, -1}));
+        parent.assign(n, vector<pair <int, int>> (m, {-1, -1}));
         for (int i = 0; i < n; i++) { for (int j = 0; j < m; j++) {parent[i][j] = {i, j};} }
         numofcomponents = n * m;
     }
@@ -100,7 +100,6 @@ public:
             size[root2.first][root2.second] += size[root1.first][root2.second];
             parent[root1.first][root1.second] = root2;
         }
-
         numofcomponents--;
     }
 };
