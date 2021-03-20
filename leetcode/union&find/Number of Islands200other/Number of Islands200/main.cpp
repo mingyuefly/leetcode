@@ -48,7 +48,7 @@ using namespace std;
 
 class DSU {
 private:
-    set<int> groupset;
+    //set<int> groupset;
 
 public:
     vector<int> parent;
@@ -66,9 +66,9 @@ public:
             int rootJ = root(j);
             parent[rootJ] = rootI;
 
-            if (parent[rootJ] != -1){
-                groupset.insert(parent[rootJ]);
-            }
+//            if (parent[rootJ] != -1){
+//                groupset.insert(parent[rootJ]);
+//            }
         }
 
     }
@@ -108,14 +108,14 @@ public:
             }
         }
 
-        set<int> groupSet;
+        set<int> countSet;
         for (int i = 0; i < dsu.parent.size(); i++) {
             if (dsu.parent[i] != -1) {
-                groupSet.insert(dsu.root(i));
+                countSet.insert(dsu.root(i));
             }
         }
 
-        return groupSet.size();
+        return countSet.size();
     }
 };
 
