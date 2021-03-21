@@ -54,6 +54,7 @@
 
 using namespace std;
 
+/*
 class LRUCache {
 public:
     list<int> lru_key;
@@ -88,6 +89,74 @@ public:
             lru[key] = value;
             lru_key.push_front(key);
         }
+    }
+};
+ */
+
+class LRUCache {
+public:
+    
+    list<pair<int, int>> cache;
+    unordered_map<int, list<pair<int, int>>::iterator> map;
+    int capacity;
+        
+    LRUCache(int capacity)
+    {
+        this->capacity = capacity;
+    }
+    
+    int get(int key)
+    {
+        int value = -1;
+        
+        if(map.count(key) > 0)
+        {
+            list<pair<int, int>>::iterator itr = map[key];
+            if(itr != cache.end())
+            {
+                value = itr->second;
+                
+                cache.push_front(*itr);
+                cache.erase(itr);
+                
+                map[key] = cache.begin();
+            }
+        }
+        
+        return value;
+    }
+    
+    void put(int key, int value)
+    {
+        if(map.count(key) > 0 && map[key] != cache.end())
+        {
+            list<pair<int, int>>::iterator itr = map[key];
+            itr->second = value;
+            
+            cache.push_front(*itr);
+            cache.erase(itr);
+
+            map[key] = cache.begin();
+            
+            return;
+        }
+        
+        if(cache.size() == capacity)
+        {
+            list<pair<int, int>>::iterator last = cache.end();
+            
+            last--;
+                
+            if(last != cache.end())
+            {
+                map[last->first] = cache.end();
+            }
+            
+            cache.pop_back();
+        }
+        
+        cache.push_front(make_pair(key, value));
+        map[key] = cache.begin();
     }
 };
 
