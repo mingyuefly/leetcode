@@ -53,12 +53,13 @@ public:
 };
 
 int main(int argc, const char * argv[]) {
-    //Solution solution = Solution();
-    Solution1 solution = Solution1();
+    Solution solution = Solution();
+    Solution1 solution1 = Solution1();
     //double x = 2.0, n = 10;
     double x = 2.0, n = -2;
-    double powResult = solution.myPow(x, n);
+    double powResult = solution1.myPow(x, n);
     cout << powResult << endl;
+    cout << solution.myPow(2, 10) << endl;
     
     return 0;
 }
