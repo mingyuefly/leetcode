@@ -2,6 +2,36 @@
 //  main.cpp
 //  125_Valid_Palindrome
 //
+/**
+ A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+ Given a string s, return true if it is a palindrome, or false otherwise.
+
+  
+
+ Example 1:
+
+ Input: s = "A man, a plan, a canal: Panama"
+ Output: true
+ Explanation: "amanaplanacanalpanama" is a palindrome.
+ Example 2:
+
+ Input: s = "race a car"
+ Output: false
+ Explanation: "raceacar" is not a palindrome.
+ Example 3:
+
+ Input: s = " "
+ Output: true
+ Explanation: s is an empty string "" after removing non-alphanumeric characters.
+ Since an empty string reads the same forward and backward, it is a palindrome.
+  
+
+ Constraints:
+
+ 1 <= s.length <= 2 * 105
+ s consists only of printable ASCII characters.
+ */
 //  Created by gmy on 2023/5/30.
 //
 
@@ -13,7 +43,7 @@ using namespace std;
 class Solution {
 public:
     bool isPalindrome(string s) {
-        
+        // 去除其他字符，并将大写字母改为小写
         vector<char> tmpS;
         for (char c : s) {
             if ((c <= 57 && c >= 48) || (c <= 122 && c >= 97)) {
@@ -27,11 +57,13 @@ public:
             return true;
         }
         
+        // 反转
         vector<char> tmpS1;
         for (char c : tmpS) {
             tmpS1.insert(tmpS1.begin(), c);
         }
         
+        // 比较
         if (tmpS == tmpS1) {
             return true;
         }
@@ -43,13 +75,16 @@ public:
 class Solution1 {
 public:
     bool isPalindrome(string s) {
+        // 去除其他字符，并将大写字母改为小写
         string sgood;
         for (char ch: s) {
             if (isalnum(ch)) {
                 sgood += tolower(ch);
             }
         }
+        // 反转
         string sgood_rev(sgood.rbegin(), sgood.rend());
+        // 比较
         return sgood == sgood_rev;
     }
 };
@@ -57,6 +92,7 @@ public:
 class Solution2 {
 public:
     bool isPalindrome(string s) {
+        // 去除其他字符，并将大写字母改为小写
         string sgood;
         for (char ch: s) {
             if (isalnum(ch)) {
@@ -64,6 +100,7 @@ public:
             }
         }
         
+        // 左右双指针运动比较
         int n = (int)sgood.size();
         int left = 0, right = n - 1;
         while (left < right) {
@@ -81,15 +118,19 @@ public:
 class Solution3 {
 public:
     bool isPalindrome(string s) {
+        // 原字符串左右双指针比较 
         int n = (int)s.size();
         int left = 0, right = n - 1;
         while (left < right) {
+            // 去除其他字符，并将大写字母改为小写
             while (left < right && !isalnum(s[left])) {
                 ++left;
             }
             while (left < right && !isalnum(s[right])) {
                 --right;
             }
+            
+            // 左右双指针运动比较
             if (left < right) {
                 if (tolower(s[left]) != tolower(s[right])) {
                     return false;
