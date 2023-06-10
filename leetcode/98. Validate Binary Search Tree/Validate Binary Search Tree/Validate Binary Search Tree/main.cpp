@@ -40,6 +40,7 @@
 #include <vector>
 #include <algorithm>
 #include <set>
+#include <stack>
 
 struct TreeNode {
     int val;
@@ -84,6 +85,45 @@ public:
         inorder(root->left);
         nodes.push_back(root->val);
         inorder(root->right);
+    }
+};
+
+class Solution1 {
+public:
+    vector<int> nodes;
+    bool isValidBST(TreeNode* root) {
+        long long inorder = (long long)INT_MIN - 1;
+        stack<TreeNode *> nodeStack;
+        while (!nodeStack.empty() || root != nullptr) {
+            while (root != nullptr) {
+                nodeStack.push(root);
+                root = root->left;
+            }
+            root = nodeStack.top();
+            nodeStack.pop();
+            if (root->val <= inorder) {
+                return false;
+            }
+            inorder = root->val;
+            root = root->right;
+         }
+        return true;
+    }
+};
+
+class Solution2 {
+public:
+    bool helper(TreeNode* root, long long lower, long long upper) {
+        if (root == nullptr) {
+            return true;
+        }
+        if (root -> val <= lower || root -> val >= upper) {
+            return false;
+        }
+        return helper(root -> left, lower, root -> val) && helper(root -> right, root -> val, upper);
+    }
+    bool isValidBST(TreeNode* root) {
+        return helper(root, LONG_MIN, LONG_MAX);
     }
 };
 
