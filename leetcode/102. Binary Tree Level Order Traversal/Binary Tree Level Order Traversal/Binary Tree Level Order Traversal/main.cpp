@@ -68,6 +68,29 @@ public:
     }
 };
 
+class Solution1 {
+    void dfs(TreeNode* root, vector<vector<int>> &v, int level) {
+        if (!root) {
+            return;
+        }
+        if (level >= v.size()) {
+            v.push_back(vector<int>());
+        }
+        v[level].push_back(root->val);
+        dfs(root->left, v, level + 1);
+        dfs(root->right, v, level + 1);
+    }
+public:
+    vector<vector<int>> levelOrder(TreeNode* root) {
+        vector<vector<int>> v;
+        if (!root) {
+            return v;
+        }
+        dfs(root, v, 0);
+        return v;
+    }
+};
+
 int main(int argc, const char * argv[]) {
     struct TreeNode *root = (struct TreeNode *)malloc(sizeof(struct TreeNode));
     root->val = 3;
@@ -90,7 +113,10 @@ int main(int argc, const char * argv[]) {
     node4->left = nullptr;
     node4->right = nullptr;
     
-    Solution solution = Solution();
+//    Solution solution = Solution();
+//    vector<vector<int>> v = solution.levelOrder(root);
+    
+    Solution1 solution = Solution1();
     vector<vector<int>> v = solution.levelOrder(root);
     
     for (int i = 0; i < v.size(); i++) {
