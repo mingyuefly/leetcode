@@ -224,6 +224,32 @@ public:
     }
 };
 
+class SolutionDP1 {
+    int getMinCountsHelper(int k, const vector<int>& coins) {
+        vector<int> memo(k + 1, k + 1); // 创建备忘录
+        memo[0] = 0; // 初始化状态
+        for (int v = 1; v <= k; v++) {
+            for(auto coin: coins) {
+                if (coin > v) {
+                    continue;
+                }
+                memo[v] = min(memo[v], memo[v - coin] + 1);
+            }
+        }
+        return memo[k] == k + 1 ? -1 : memo[k];
+    }
+public:
+    int coinChange(vector<int>& coins, int amount) {
+        if (amount == 0) {
+            return 0;
+        }
+        if (coins.empty()) {
+            return -1;
+        }
+        return getMinCountsHelper(amount, coins);
+    }
+};
+
 class Solution1 {
 public:
     int coinChange(vector<int>& coins, int amount) {
@@ -339,6 +365,10 @@ int main(int argc, const char * argv[]) {
 //    int result = solution.coinChange(coins, amount);
 //    cout << result << endl;
     
+    SolutionDP1 solution = SolutionDP1();
+    int result = solution.coinChange(coins, amount);
+    cout << result << endl;
+    
 //    Solution1 solution1 = Solution1();
 //    int result = solution1.coinChange(coins, amount);
 //    cout << result << endl;
@@ -347,9 +377,9 @@ int main(int argc, const char * argv[]) {
 //    int result = solution2.coinChange(coins, amount);
 //    cout << result << endl;
     
-    Solution3 solution3 = Solution3();
-    int result = solution3.coinChange(coins, amount);
-    cout << result << endl;
+//    Solution3 solution3 = Solution3();
+//    int result = solution3.coinChange(coins, amount);
+//    cout << result << endl;
     
     return 0;
 }
