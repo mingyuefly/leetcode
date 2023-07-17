@@ -111,7 +111,7 @@ public:
     }
 };
 
-// 通项公式矩阵形式，时间复杂度（O(log(n)） 空间复杂度（O(1)）
+// 通项公式矩阵形式，时间复杂度（O(log(n)） 空间复杂度（O(1)），基本思路：通过矩阵构建一个递推关系，最终将其归为一个基础矩阵的n次幂，通过位运算将n次幂的求解的时间复杂度优化至O(log(n)。
 
 class Solution4 {
 public:
@@ -148,7 +148,7 @@ public:
     }
 };
 
-// Benet's Formula，时间复杂度（O(log(n)） 空间复杂度（O(1)）
+// Benet's Formula，时间复杂度（O(log(n)） 空间复杂度（O(1)），基本思路：直接获取其通项公式。
 class Solution5 {
 public:
     int climbStairs(int n) {
