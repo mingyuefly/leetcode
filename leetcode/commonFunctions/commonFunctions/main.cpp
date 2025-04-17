@@ -38,6 +38,30 @@ string reverseString(string &str) {
     return str1;
 }
 
+// 翻转字符串
+string reverseString(string &str) {
+    string str1 = string(str);
+    size_t length = str1.length();
+    size_t l = 0, r = length - 1;
+    while (l <= r) {
+        swap(str1[l], str1[r]);
+        l++;
+        r--;
+    }
+    return str1;
+}
+
+// 字符串包含子字符串个数
+int subStringCount(string str, string subStr) {
+    int count = 0;
+    size_t index = 0;
+    while ((index = str.find(subStr, index)) < str.length()) {
+        count++;
+        index++;
+    }
+    return count;
+}
+
 int main(int argc, const char * argv[]) {
     
     vector<string> strings = split("hello world", ' '); 
